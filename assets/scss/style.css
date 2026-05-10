@@ -632,6 +632,99 @@ p, h1, h2, h3, h4, h5, h6 {
   }
 }
 
+.project_blocks {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40rem;
+  margin-bottom: 60rem;
+}
+@media (max-width: 850px) {
+  .project_blocks {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 24rem;
+    margin-bottom: 40rem;
+  }
+}
+.project_block {
+  border-radius: 16rem;
+  padding: 32rem 20rem;
+  display: flex;
+  flex-direction: column;
+  gap: 16rem;
+  border: 2rem dashed #FF0000;
+  border-radius: 16rem;
+}
+.project_block-head {
+  display: flex;
+  align-items: center;
+  gap: 16rem;
+}
+.project_block-head .number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 55rem;
+  height: 55rem;
+  border-radius: 50%;
+  display: flex;
+  flex-shrink: 0;
+  background: linear-gradient(90deg, #FF0000 0%, #EB2323 100%);
+  font-family: "Disruptors Script", sans-serif;
+}
+@media (max-width: 850px) {
+  .project_block-head .number {
+    width: 40rem;
+    height: 40rem;
+  }
+}
+.project_block-head .number span {
+  font-weight: 400;
+  font-size: 70rem;
+  line-height: 100%;
+  color: #FFFFFF;
+  text-align: center;
+  transform: translate(-2rem, 7rem);
+}
+@media (max-width: 850px) {
+  .project_block-head .number span {
+    font-size: 50rem;
+    transform: translate(-2rem, 5rem);
+  }
+}
+.project_block-head h3 {
+  font-family: "Onest", sans-serif;
+  font-weight: 400;
+  font-size: 32rem;
+  color: #FFFFFF;
+}
+@media (max-width: 850px) {
+  .project_block-head h3 {
+    font-size: 20rem;
+  }
+}
+.project_block p {
+  font-weight: 400;
+  font-size: 24rem;
+  line-height: 130%;
+  vertical-align: middle;
+  color: #FFFFFF;
+}
+@media (max-width: 850px) {
+  .project_block p {
+    font-size: 16rem;
+  }
+}
+.project .btn-red {
+  width: 350rem;
+  margin: auto;
+  display: block;
+}
+@media (max-width: 850px) {
+  .project .btn-red {
+    width: 100%;
+  }
+}
+
 @media (max-width: 850px) {
   .statistic .section_head {
     margin-bottom: 60rem;

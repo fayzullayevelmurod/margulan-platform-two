@@ -1,0 +1,97 @@
+// project
+.project {
+  &_blocks {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 40rem;
+    margin-bottom: 60rem;
+
+    @include media('md') {
+      grid-template-columns: repeat(1,1fr);
+      gap: 24rem;
+      margin-bottom: 40rem;
+    }
+  }
+
+  &_block {
+    border-radius: 16rem;
+    padding: 32rem 20rem;
+    display: flex;
+    flex-direction: column;
+    gap: 16rem;
+    border: 2rem dashed $color-red;
+    border-radius: 16rem;
+
+    &-head {
+      display: flex;
+      align-items: center;
+      gap: 16rem;
+
+      .number {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 55rem;
+        height: 55rem;
+        border-radius: 50%;
+        display: flex;
+        flex-shrink: 0;
+        background: linear-gradient(90deg, #FF0000 0%, #EB2323 100%);
+        font-family: 'Disruptors Script', sans-serif;
+
+        @include media('md') {
+          width: 40rem;
+          height: 40rem;
+        }
+
+        span {
+          font-weight: 400;
+          font-size: 70rem;
+          line-height: 100%;
+          color: $color-white;
+          text-align: center;
+          transform: translate(-2rem, 7rem);
+
+          @include media('md') {
+            font-size: 50rem;
+            transform: translate(-2rem, 5rem);
+          }
+        }
+      }
+
+      h3 {
+        font-family: $font-Onest;
+        font-weight: 400;
+        font-size: 32rem;
+        color: $color-white;
+
+        @include media('md') {
+          font-size: 20rem;
+        }
+      }
+    }
+
+    p {
+      font-weight: 400;
+      font-size: 24rem;
+      line-height: 130%;
+      vertical-align: middle;
+      color: $color-white;
+
+      @include media('md') {
+        font-size: 16rem;
+      }
+    }
+  }
+
+  .btn-red {
+    width: 350rem;
+    margin: auto;
+    display: block;
+
+    @include media('md') {
+      width: 100%;
+    }
+  }
+}
+// project
