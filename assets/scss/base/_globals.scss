@@ -1,0 +1,266 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+
+img {
+  max-width: 100%;
+}
+
+span, label {
+  display: inline-block;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 1px;
+
+  @media (max-width: 1850px) {
+    font-size: 0.95px;
+  }
+
+  @media (max-width: 1780px) {
+    font-size: 0.9px;
+  }
+
+  @media (max-width: 1680px) {
+    font-size: 0.85px;
+  }
+
+  @media (max-width: 1580px) {
+    font-size: 0.8px;
+  }
+
+  @media (max-width: 1480px) {
+    font-size: 0.75px;
+  }
+
+  @media (max-width: 1380px) {
+    font-size: 0.7px;
+  }
+
+  @media (max-width: 1330px) {
+    font-size: 0.65px;
+  }
+
+  @media (max-width: 1240px) {
+    font-size: 0.6px;
+  }
+
+  @media (max-width: 1140px) {
+    font-size: 0.55px;
+  }
+
+  @media (max-width: 1030px) {
+    font-size: 0.5px;
+  }
+
+  @media (max-width: 930px) {
+    font-size: 0.45px;
+  }
+
+  @media (max-width: 850px) {
+    font-size: 1px;
+  }
+}
+
+body {
+  font-family: $font-Outfit;
+  font-style: normal;
+  font-display: swap;
+  background: $color-dark;
+}
+
+body.menu-open {
+  overflow: hidden;
+}
+
+input, textarea {
+  outline: none;
+  border: 0;
+  background: transparent;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  background: transparent;
+  outline: 0;
+}
+
+address {
+  font-style: normal;
+}
+
+.wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+ul, ol, dl {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  max-width: calc(1720rem);
+  margin: 0 auto;
+  padding: 0 20rem;
+}
+
+.section_title {
+  font-weight: 400;
+  font-size: 67rem;
+  line-height: 121%;
+  text-transform: uppercase;
+  color: $color-white;
+
+  span {
+    display: inline;
+    background: linear-gradient(90deg, #f00 0%, #c70a0a 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  @include media('md') {
+    font-size: 28rem;
+  }
+}
+
+.sub_title {
+  font-weight: 300;
+  font-style: Italic;
+  font-size: 20rem;
+  line-height: 100%;
+  letter-spacing: -3%;
+  text-transform: uppercase;
+  color: $color-grey-ac;
+}
+
+.btn {
+  &-white {
+    width: auto;
+    height: 80rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: $color-white;
+    padding: 0 46.5rem;
+    border-radius: 72rem;
+    font-weight: 700;
+    font-size: 24rem;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: #C70A0A;
+
+    @include media('md') {
+      padding: 0 30rem;
+      height: 60rem;
+      font-size: 20rem;
+    }
+  }
+
+  &-blue {
+    background: linear-gradient(90deg, #FF0000 0%, #C70A0A 100%);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 80rem;
+    width: auto;
+    border-radius: 80rem;
+    font-weight: 700;
+    font-size: 26rem;
+    line-height: 77%;
+    text-transform: uppercase;
+    color: $color-white;
+    padding: 0 84rem;
+    transition: box-shadow 0.28s ease, transform 0.28s ease;
+
+    &:hover,
+    &:focus-visible {
+      box-shadow: 0 14rem 30rem rgba(248, 65, 65, 0.35);
+      transform: translateY(-2rem);
+    }
+
+    @include media('md') {
+      padding: 0 30rem;
+      height: 60rem;
+      font-size: 20rem;
+    }
+  }
+}
+
+.form {
+  &-inp {
+    background: rgba(24, 23, 28, 0.64);
+    position: relative;
+    z-index: 1;
+    border-radius: 80rem;
+    overflow: hidden;
+
+    @include media('md') {
+      border-radius: 54rem;
+    }
+
+    &::after {
+      border-radius: 64rem;
+      content: "";
+      position: absolute;
+      z-index: -1;
+      inset: 0;
+      border: 1rem solid transparent;
+      background: linear-gradient(170deg, #FFFFFF, rgba(119, 119, 119, 0.2)) border-box;
+      mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+      mask-composite: exclude;
+
+      @include media('md') {
+        border-radius: 32rem;
+      }
+    }
+
+    input {
+      width: 100%;
+      height: 80rem;
+      font-family: $font-Gilroy;
+      font-weight: 200;
+      font-size: 24rem;
+      color: $color-white;
+      padding: 0 18rem;
+
+      &::placeholder {
+        color: $color-white;
+      }
+
+      @include media('md') {
+        height: 60rem;
+        font-size: 16rem;
+        padding: 0 20rem;
+      }
+    }
+  }
+}
+
+.section-top {
+  margin-top: 150rem;
+
+  @include media('md') {
+    margin-top: 60rem;
+  }
+}

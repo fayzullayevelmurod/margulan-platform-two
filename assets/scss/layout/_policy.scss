@@ -1,0 +1,125 @@
+// policy
+.policy {
+  margin: 80rem 0;
+
+  @include media('md') {
+    margin: 30rem 0;
+  }
+
+  .container {
+    max-width: 1220rem;
+  }
+
+  h1 {
+    font-family: $font-Onest;
+    font-weight: 900;
+    font-size: 60rem;
+    text-transform: uppercase;
+    text-align: center;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #f00 0%, #c70a0a 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 48rem;
+
+    @include media('md') {
+      font-size: 32rem;
+      margin-bottom: 32rem;
+    }
+
+    @include media('xs') {
+      font-size: 20rem;
+      margin-bottom: 24rem;
+    }
+  }
+
+  &_in {
+    display: flex;
+    flex-direction: column;
+    gap: 32rem;
+
+    @include media('md') {
+      gap: 24rem;
+    }
+  }
+
+  &_block {
+    p,li {
+      font-family: $font-Gilroy;
+      font-weight: 300;
+      font-size: 22rem;
+      line-height: 120%;
+      color: #E6E6E6;
+
+      @include media('md') {
+        font-size: 16rem;
+      }
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 8rem;
+    }
+
+    p {
+      margin-bottom: 32rem;
+
+      @include media('md') {
+        margin-bottom: 16rem;
+      }
+    }
+  }
+
+  .title {
+    display: flex;
+    align-items: center;
+    gap: 24rem;
+    margin-bottom: 16rem;
+
+    @include media('md') {
+      gap: 12rem;
+      margin-bottom: 12rem;
+    }
+
+    .number {
+      flex-shrink: 0;
+      width: 42rem;
+      height: 42rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(90deg, #FF0000 0%, #C70A0A 100%);
+
+      @include media('md') {
+        width: 30rem;
+        height: 30rem;
+      }
+
+      span {
+        font-family: $font-Gilroy;
+        font-weight: 700;
+        font-size: 28rem;
+        color: $color-black;
+
+        @include media('md') {
+          font-size: 18rem;
+        }
+      }
+    }
+
+    h3 {
+      font-family: $font-Gilroy;
+      font-weight: 500;
+      font-size: 32rem;
+      color: #E6E6E6;
+
+      @include media('md') {
+        font-size: 20rem;
+      }
+    }
+  }
+}
+// policy

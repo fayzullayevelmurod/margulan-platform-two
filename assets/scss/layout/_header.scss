@@ -1,0 +1,90 @@
+.header {
+  padding: 20rem 0;
+  position: relative;
+
+  @include media('md') {
+    padding: 12rem 0;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3rem;
+    background: linear-gradient(100.44deg, #F5F5F5 0.4%, #8F8F8F 95.78%);
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &_logo {
+    width: 263rem;
+    height: 82rem;
+    position: relative;
+    z-index: 13;
+
+    @include media('md') {
+      width: 128rem;
+      height: 40rem;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &_link {
+    display: flex;
+    align-items: center;
+    gap: 40rem;
+
+    @include media('md') {
+      position: fixed;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: $color-dark;
+      z-index: 3;
+      flex-direction: column;
+      align-items: start;
+      padding: 80rem 32rem 20rem 32rem;
+      transition: .3s ease;
+    }
+
+    &.active {
+      left: 0;
+    }
+
+    a {
+      font-weight: 400;
+      font-size: 20rem;
+      line-height: 175%;
+      color: $color-white;
+      transition: .3s ease;
+
+      &:hover {
+        color: #C70A0A;
+      }
+    }
+  }
+
+  .burger {
+    width: 40rem;
+    height: 40rem;
+    display: none;
+    position: relative;
+    z-index: 4;
+
+    @include media('md') {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
