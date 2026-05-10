@@ -1,0 +1,60 @@
+// statistic
+.statistic {
+
+  .section_head {
+    @include media('md') {
+      margin-bottom: 60rem;
+      text-align: center;
+    }
+  }
+
+  &_blocks {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 76rem;
+
+    @include media('md') {
+      grid-template-columns: repeat(2,1fr);
+      gap: 40rem;
+    }
+
+    @include media('xs') {
+      grid-template-columns: repeat(1,1fr);
+    }
+  }
+
+  &_block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12rem;
+    text-align: center;
+
+    h3 {
+      font-family: $font-Onest;
+      font-weight: 700;
+      font-size: 68rem;
+      text-transform: uppercase;
+      background: linear-gradient(90deg, #f00 0%, #eb2323 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+
+      @include media('md') {
+        font-size: 32rem;
+      }
+    }
+
+    span {
+      font-weight: 400;
+      font-size: 28rem;
+      text-align: center;
+      color: $color-white-f5;
+
+      @include media('md') {
+        font-size: 20rem;
+      }
+    }
+  }
+}
+// statistic

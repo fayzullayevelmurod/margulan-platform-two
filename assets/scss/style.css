@@ -632,6 +632,62 @@ p, h1, h2, h3, h4, h5, h6 {
   }
 }
 
+@media (max-width: 850px) {
+  .statistic .section_head {
+    margin-bottom: 60rem;
+    text-align: center;
+  }
+}
+.statistic_blocks {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 76rem;
+}
+@media (max-width: 850px) {
+  .statistic_blocks {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40rem;
+  }
+}
+@media (max-width: 480px) {
+  .statistic_blocks {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.statistic_block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12rem;
+  text-align: center;
+}
+.statistic_block h3 {
+  font-family: "Onest", sans-serif;
+  font-weight: 700;
+  font-size: 68rem;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #f00 0%, #eb2323 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@media (max-width: 850px) {
+  .statistic_block h3 {
+    font-size: 32rem;
+  }
+}
+.statistic_block span {
+  font-weight: 400;
+  font-size: 28rem;
+  text-align: center;
+  color: #F5F5F5;
+}
+@media (max-width: 850px) {
+  .statistic_block span {
+    font-size: 20rem;
+  }
+}
+
 .video_cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
