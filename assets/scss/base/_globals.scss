@@ -138,7 +138,7 @@ p, h1, h2, h3, h4, h5, h6 {
   }
 
   @include media('md') {
-    font-size: 28rem;
+    font-size: 26rem;
   }
 }
 
@@ -150,6 +150,10 @@ p, h1, h2, h3, h4, h5, h6 {
   letter-spacing: -3%;
   text-transform: uppercase;
   color: $color-grey-ac;
+
+  @include media('md') {
+    font-size: 16rem;
+  }
 }
 
 .btn {
@@ -176,91 +180,39 @@ p, h1, h2, h3, h4, h5, h6 {
     }
   }
 
-  &-blue {
-    background: linear-gradient(90deg, #FF0000 0%, #C70A0A 100%);
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    height: 80rem;
-    width: auto;
-    border-radius: 80rem;
+  &-red {
+    padding: 20rem 50rem;
+    font-family: $font-Onest;
     font-weight: 700;
-    font-size: 26rem;
-    line-height: 77%;
+    font-style: Bold;
+    font-size: 22rem;
+    line-height: 100%;
+    letter-spacing: -2%;
+    text-align: center;
     text-transform: uppercase;
     color: $color-white;
-    padding: 0 84rem;
-    transition: box-shadow 0.28s ease, transform 0.28s ease;
-
-    &:hover,
-    &:focus-visible {
-      box-shadow: 0 14rem 30rem rgba(248, 65, 65, 0.35);
-      transform: translateY(-2rem);
-    }
-
-    @include media('md') {
-      padding: 0 30rem;
-      height: 60rem;
-      font-size: 20rem;
-    }
-  }
-}
-
-.form {
-  &-inp {
-    background: rgba(24, 23, 28, 0.64);
-    position: relative;
-    z-index: 1;
-    border-radius: 80rem;
-    overflow: hidden;
-
-    @include media('md') {
-      border-radius: 54rem;
-    }
-
-    &::after {
-      border-radius: 64rem;
-      content: "";
-      position: absolute;
-      z-index: -1;
-      inset: 0;
-      border: 1rem solid transparent;
-      background: linear-gradient(170deg, #FFFFFF, rgba(119, 119, 119, 0.2)) border-box;
-      mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
-      mask-composite: exclude;
-
-      @include media('md') {
-        border-radius: 32rem;
-      }
-    }
-
-    input {
-      width: 100%;
-      height: 80rem;
-      font-family: $font-Gilroy;
-      font-weight: 200;
-      font-size: 24rem;
-      color: $color-white;
-      padding: 0 18rem;
-
-      &::placeholder {
-        color: $color-white;
-      }
-
-      @include media('md') {
-        height: 60rem;
-        font-size: 16rem;
-        padding: 0 20rem;
-      }
-    }
+    border-radius: 100rem;
+    height: 72rem;
+    background: linear-gradient(90deg, #FF0000 0%, #EB2323 100%);
   }
 }
 
 .section-top {
-  margin-top: 150rem;
+  margin-top: 140rem;
 
   @include media('md') {
-    margin-top: 60rem;
+    margin-top: 80rem;
+  }
+}
+
+.section_head {
+  display: flex;
+  flex-direction: column;
+  gap: 16rem;
+  margin-bottom: 60rem;
+
+  @include media('md') {
+    gap: 8rem;
+    margin-bottom: 40rem;
   }
 }

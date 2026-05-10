@@ -1,0 +1,102 @@
+// video
+.video {
+  &_cards {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 70rem;
+
+    @include media('md') {
+      grid-template-columns: repeat(1,1fr);
+      gap: 32rem;
+    }
+  }
+
+  &_card {
+    border-radius: 20rem;
+    border: 1rem solid $color-red;
+    overflow: hidden;
+
+    &-img {
+      height: 330rem;
+      position: relative;
+
+      @include media('sm') {
+        height: 250rem;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+      }
+
+      .play {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 60rem;
+        height: 60rem;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(90deg, #FF0000 0%, #EB2323 100%);
+
+        img {
+          width: 36rem;
+          height: 36rem;
+          object-fit: contain;
+        }
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &-text {
+      padding: 20rem 32rem 40rem 32rem;
+
+      @include media('md') {
+        padding: 20rem 8rem;
+      }
+
+      h3 {
+        font-family: $font-Onest;
+        font-weight: 700;
+        font-size: 28rem;
+        background: linear-gradient(90deg, #f00 0%, #eb2323 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        @include media('md') {
+          font-size: 24rem;
+        }
+      }
+
+      p {
+        font-family: $font-Inter;
+        font-weight: 300;
+        font-size: 20rem;
+        color: $color-white-eb;
+        margin: 22rem 0 40rem 0;
+      }
+
+      .btn-red {
+        width: 100%;
+        height: 60rem;
+        font-size: 24rem;
+        padding: 10rem;
+      }
+    }
+  }
+}
+// video
