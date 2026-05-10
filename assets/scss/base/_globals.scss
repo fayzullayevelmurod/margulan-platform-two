@@ -194,6 +194,12 @@ p, h1, h2, h3, h4, h5, h6 {
     border-radius: 100rem;
     height: 72rem;
     background: linear-gradient(90deg, #FF0000 0%, #EB2323 100%);
+
+    @include media('md') {
+      height: 60rem;
+      font-size: 18rem;
+      padding: 10rem;
+    }
   }
 }
 

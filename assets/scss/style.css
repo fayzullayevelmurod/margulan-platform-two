@@ -516,6 +516,13 @@ p, h1, h2, h3, h4, h5, h6 {
   height: 72rem;
   background: linear-gradient(90deg, #FF0000 0%, #EB2323 100%);
 }
+@media (max-width: 850px) {
+  .btn-red {
+    height: 60rem;
+    font-size: 18rem;
+    padding: 10rem;
+  }
+}
 
 .section-top {
   margin-top: 140rem;
@@ -718,6 +725,112 @@ p, h1, h2, h3, h4, h5, h6 {
   height: 60rem;
   font-size: 24rem;
   padding: 10rem;
+}
+
+.comfort .container {
+  display: flex;
+  gap: 60rem;
+}
+@media (max-width: 850px) {
+  .comfort .container {
+    flex-direction: column;
+    gap: 40rem;
+  }
+}
+.comfort .mobile_head {
+  display: none;
+}
+@media (max-width: 850px) {
+  .comfort .mobile_head {
+    display: flex;
+    margin-bottom: 0;
+  }
+}
+.comfort_imgs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24rem;
+  height: 840rem;
+  width: 825rem;
+}
+@media (max-width: 850px) {
+  .comfort_imgs {
+    width: 100%;
+    height: 466rem;
+    gap: 12rem;
+  }
+}
+.comfort_imgs img {
+  border: 1rem solid #FFFFFF;
+  border-radius: 30rem;
+  height: 407rem;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (max-width: 850px) {
+  .comfort_imgs img {
+    height: 225rem;
+    border-radius: 12rem;
+    -o-object-position: top;
+       object-position: top;
+  }
+}
+.comfort_imgs img:nth-child(1) {
+  grid-row: span 2;
+  height: 100%;
+}
+.comfort_text {
+  width: 770rem;
+}
+@media (max-width: 850px) {
+  .comfort_text {
+    width: 100%;
+  }
+}
+@media (max-width: 850px) {
+  .comfort_text .section_head {
+    display: none;
+  }
+}
+.comfort_text ul {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20rem;
+  border-left: 2rem solid #FF0000;
+  max-width: 800rem;
+  margin: 60rem 0;
+}
+@media (max-width: 850px) {
+  .comfort_text ul {
+    margin: 0 0 32rem 0;
+  }
+}
+.comfort_text ul li {
+  margin-left: 20rem;
+  list-style-type: disc;
+  font-weight: 500;
+  font-size: 28rem;
+  line-height: 198%;
+  color: #FFFFFF;
+}
+@media (max-width: 850px) {
+  .comfort_text ul li {
+    font-size: 16rem;
+    margin-left: 15rem;
+  }
+}
+.comfort_text .btn-red {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12rem;
+  width: 350rem;
+}
+@media (max-width: 850px) {
+  .comfort_text .btn-red {
+    width: 100%;
+  }
 }
 
 .policy {
