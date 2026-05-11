@@ -1,0 +1,132 @@
+// investment
+.investment {
+
+  .container {
+    position: relative;
+  }
+
+  &_text {
+    max-width: 800rem;
+
+    .title {
+      font-family: $font-Onest;
+      font-weight: 600;
+      font-size: 32rem;
+      line-height: 100%;
+      letter-spacing: 1%;
+      color: $color-white;
+
+      @include media('md') {
+        font-weight: 500;
+        font-size: 20rem;
+      }
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 24rem;
+      margin: 20rem 0 40rem 0;
+
+      li {
+        font-family: $font-Onest;
+        font-weight: 300;
+        font-size: 24rem;
+        line-height: 130%;
+        letter-spacing: 1%;
+        color: $color-white;
+
+        @include media('md') {
+          font-size: 18rem;
+        }
+      }
+    }
+
+    p {
+      border-radius: 16rem;
+      border: 2rem dashed $color-red;
+      padding: 32rem 20rem;
+      max-width: 792rem;
+      font-family: $font-Onest;
+      font-weight: 500;
+      font-size: 26rem;
+      line-height: 140%;
+      text-align: center;
+      color: $color-white;
+      margin-bottom: 70rem;
+
+      @include media('md') {
+        padding: 16rem 12rem;
+        font-size: 18rem;
+        margin: 40rem 0;
+      }
+    }
+  }
+
+  &_img {
+    position: absolute;
+    top: 0;
+    right: -74rem;
+    width: 728rem;
+    z-index: -1;
+
+    @include media('md') {
+      display: none;
+      right: 0;
+      left: 0;
+      margin: auto;
+    }
+
+    img {
+      position: absolute;
+      top: -100rem;
+      right: -74rem;
+      min-width: 1100rem;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 500rem;
+      height: 760rem;
+      background: rgba(255, 0, 0, 1);
+      filter: blur(405px);
+      z-index: -1;
+    }
+  }
+
+  .mobile_img {
+    display: none;
+    position: relative;
+    width: 350rem;
+    height: 448rem;
+
+    @include media('md') {
+      display: block;
+    }
+
+    img {
+      position: absolute;
+      top: -55rem;
+      right: 0;
+      min-width: 500rem;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 240rem;
+      height: 360rem;
+      background: rgba(255, 0, 0, 1);
+      filter: blur(205px);
+      z-index: -1;
+    }
+  }
+
+  .btn-red {
+    @include media('md') {
+      width: 100%;
+    }
+  }
+}
+// investment
