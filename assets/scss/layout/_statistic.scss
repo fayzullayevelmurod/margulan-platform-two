@@ -1,5 +1,10 @@
 // statistic
 .statistic {
+  padding-top: 140rem;
+
+  @include media('md') {
+    padding-top: 0;
+  }
 
   .section_head {
     @include media('md') {

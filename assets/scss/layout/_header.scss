@@ -1,6 +1,7 @@
 .header {
   padding: 20rem 0;
   position: relative;
+  z-index: 2;
 
   @include media('md') {
     padding: 12rem 0;
